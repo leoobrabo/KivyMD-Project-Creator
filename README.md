@@ -1,3 +1,5 @@
+## Not Maintained
+
 # KivyMD Project Creator
 A GUI Based Tool to Create Project for [KivyMD](https://github.com/kivymd/KivyMD).
 
