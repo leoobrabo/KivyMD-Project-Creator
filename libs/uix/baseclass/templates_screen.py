@@ -1,13 +1,14 @@
 import os
 
-import utils
-from constants import TEMPLATES_FOLDER
 from kivy.properties import BooleanProperty, StringProperty
 from kivy.uix.behaviors import ToggleButtonBehavior
 from kivymd.theming import ThemableBehavior
 from kivymd.uix.behaviors import HoverBehavior
 from kivymd.uix.boxlayout import MDBoxLayout
 from kivymd.uix.screen import MDScreen
+
+import utils
+from constants import TEMPLATES_FOLDER
 
 
 class TemplatesScreen(MDScreen):
@@ -30,7 +31,7 @@ class TemplatesScreen(MDScreen):
                 template_name = widget.name
                 get_details = self.manager.get_screen("get_details")
                 get_details.selected_template = template_name
-                SELECTED_TEMPLATE_FOLDER = os.path.join(
+                SELECTED_TEMPLATE_FOLDER = os.path.join(  # NOQA: N806
                     TEMPLATES_FOLDER, template_name
                 )
                 get_details.template_py_files = utils.get_files(
